@@ -1,0 +1,31 @@
+[package]
+name = "gxandria"
+description = "A command-line script for creating categories into Heroic Games Launcher"
+authors = ["ProvoK"]
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ProvoK/gxandria"
+keywors = ["heroic", "games", "launcher", "categories", "cli", "rust"]
+
+[dependencies]
+anyhow = "1.0.101"
+async-trait = "0.1.89"
+chrono = { version = "0.4.43", features = ["serde"] }
+moka = { version = "0.12.13", features = ["future"] }
+regex = "1.12.3"
+reqwest = { version = "0.13.2", features = ["json", "query"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+shellexpand = "3.1.1"
+sqlx = { version = "0.8.6", features = ["runtime-tokio-rustls", "sqlite", "macros", "migrate"] }
+strsim = "0.11.1"
+tokio = { version = "1.49.0", features = ["full"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.22", features = ["env-filter", "fmt"] }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
