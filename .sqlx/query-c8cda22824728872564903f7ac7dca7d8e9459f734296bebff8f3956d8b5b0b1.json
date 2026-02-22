@@ -1,0 +1,56 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT * FROM games WHERE name LIKE ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "id",
+        "ordinal": 0,
+        "type_info": "Text"
+      },
+      {
+        "name": "name",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "summary",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "storyline",
+        "ordinal": 3,
+        "type_info": "Text"
+      },
+      {
+        "name": "genres",
+        "ordinal": 4,
+        "type_info": "Text"
+      },
+      {
+        "name": "store_name",
+        "ordinal": 5,
+        "type_info": "Text"
+      },
+      {
+        "name": "store_id",
+        "ordinal": 6,
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "c8cda22824728872564903f7ac7dca7d8e9459f734296bebff8f3956d8b5b0b1"
+}

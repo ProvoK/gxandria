@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "\n            INSERT INTO games (id, name, summary, storyline, genres, store_name, store_id)\n            VALUES (?, ?, ?, ?, ?, ?, ?)\n            ON CONFLICT(id) DO UPDATE SET\n                name = excluded.name,\n                summary = excluded.summary,\n                storyline = excluded.storyline,\n                genres = excluded.genres,\n                store_name = excluded.store_name,\n                store_id = excluded.store_id\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "b658f5dd85be93e52ee2b7f7c4dad7fe7ad235bb4951a593f6c45f64a6711707"
+}
